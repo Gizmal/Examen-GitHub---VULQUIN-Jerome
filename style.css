@@ -1,0 +1,388 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: #1B2430;
+  font-size: 0px;
+  font-family: "Montserrat";
+}
+header nav {
+  background-color: #1B2430;
+  position: fixed;
+  text-align: center;
+  padding: 0.67rem 0;
+  font-size: 1.14rem;
+  display: flex;
+  margin: auto;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  top: 0;
+  z-index: 2;
+}
+header nav img {
+  width: 70px;
+  height: 48px;
+}
+header nav ul {
+  max-width: 1200px;
+  display: flex;
+}
+header nav ul li {
+  list-style: none;
+  padding: 0 1rem;
+}
+header nav ul li a {
+  display: block;
+  padding: 3rem 0.5rem;
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+header nav ul li a:hover {
+  animation-name: etoile;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+}
+header nav ul li a:hover::before {
+  content: "";
+  background-color: #D9D9D9;
+  left: -0.5rem;
+  right: -0.5rem;
+  top: 4.5rem;
+  height: 1px;
+  position: absolute;
+}
+header .miniMenu {
+  display: none;
+}
+
+.intro {
+  margin-top: 8.6rem;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  size: 0;
+}
+
+main article {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  margin-top: 4rem;
+  justify-content: space-between;
+  scroll-margin-top: 10rem;
+}
+main article:nth-of-type(2n) {
+  flex-direction: row-reverse;
+}
+main article:nth-of-type(2n) .section {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+main article:nth-of-type(2n) img {
+  margin-right: 1rem;
+}
+main article:nth-of-type(2n+1) {
+  flex-direction: row;
+}
+main article:nth-of-type(2n+1) .section {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+main article:nth-of-type(2n+1) img {
+  margin-left: 1rem;
+}
+main article img {
+  width: 300px;
+  height: 284px;
+}
+main article .section {
+  max-width: 750px;
+}
+main article .section h2 {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 1rem;
+}
+main article .section .composition {
+  display: flex;
+  margin-bottom: 1rem;
+  font-family: "Roboto";
+}
+main article .section .composition p.genre {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Roboto";
+  font-weight: 500;
+  width: fit-content;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-right: 2rem;
+}
+main article .section .composition p.tellurique {
+  background-color: #d6d5a8;
+}
+main article .section .composition p.gazeuse {
+  background: linear-gradient(rgba(129, 103, 151, 0.8039215686), #51557E);
+  color: white;
+}
+main article .section .composition p.date {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Roboto";
+  color: white;
+  width: fit-content;
+  padding: 12px 16px;
+  background-color: #1B2430;
+  border-radius: 8px;
+}
+main article .section p.description {
+  font-family: "roboto";
+  text-align: justify;
+}
+main .ceinture {
+  margin: 7rem auto;
+  max-width: 1200px;
+  position: relative;
+}
+main .ceinture p {
+  text-transform: uppercase;
+  font-family: "Roboto";
+  font-weight: bolder;
+  font-size: 2rem;
+  text-align: center;
+}
+main .ceinture p::before, main .ceinture p::after {
+  content: "";
+  position: absolute;
+  background-color: #1B2430;
+  height: 2px;
+  top: 1rem;
+  width: calc(50% - 190px);
+}
+main .ceinture p::before {
+  left: 0;
+}
+main .ceinture p::after {
+  right: 0;
+}
+
+footer {
+  margin-top: 8rem;
+  background-color: #1B2430;
+}
+footer .sectionDePied {
+  padding-top: 2rem;
+  max-width: 1200px;
+  display: flex;
+  margin: auto;
+  margin-bottom: 2rem;
+  position: relative;
+}
+footer .sectionDePied:first-of-type:before {
+  content: "";
+  height: 1px;
+  background-color: #9F9F9F;
+  left: 0;
+  right: 0;
+  bottom: -2rem;
+  position: absolute;
+}
+footer .sectionDePied .colonneDePied {
+  margin: 0 auto;
+  padding: 0 4rem;
+  position: relative;
+}
+footer .sectionDePied .colonneDePied:nth-of-type(1)::before, footer .sectionDePied .colonneDePied:nth-of-type(3)::before {
+  content: "";
+  width: 1px;
+  background-color: #9F9F9F;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  position: absolute;
+}
+footer .sectionDePied .colonneDePied:nth-of-type(1)::before {
+  right: 0;
+}
+footer .sectionDePied .colonneDePied:nth-of-type(3)::before {
+  left: 0;
+}
+footer .sectionDePied .colonneDePied h4 {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 2rem;
+  color: white;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+footer .sectionDePied .colonneDePied ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .sectionDePied .colonneDePied ul li {
+  list-style: none;
+  padding: 1rem 2rem;
+}
+footer .sectionDePied .colonneDePied ul li a {
+  color: #9F9F9F;
+  text-decoration: none;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+}
+footer .sectionDePied .colonneDePied ul li a:hover {
+  color: white;
+}
+footer p {
+  color: white;
+  max-width: 1200px;
+  font-family: sans-serif;
+  font-weight: 500;
+  text-align: center;
+  font-size: 1rem;
+  padding-top: 0.5rem;
+  margin: auto;
+}
+footer p:last-of-type {
+  padding-bottom: 1rem;
+}
+
+@media screen and (max-width: 1000px) {
+  header nav img {
+    padding-left: 3rem;
+    width: 35px;
+    height: 24px;
+  }
+  header nav ul {
+    display: none;
+  }
+  header nav .miniMenu {
+    font-size: 2rem;
+    padding-right: 2rem;
+    color: white;
+    display: inline;
+  }
+  header .intro {
+    margin-top: 4rem;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: -200px 0;
+  }
+  /* main {
+
+      article {
+          &:nth-of-type(2n) {
+
+              .section {
+                  margin-left: 1rem;
+                  margin-right: 2rem;
+              }
+          }
+
+          &:nth-of-type(2n+1) {
+
+              .section {
+                  margin-left: 2rem;
+                  margin-right: 1rem;
+              }
+          }
+      }
+  } */
+  footer .sectionDePied {
+    flex-direction: column;
+  }
+  footer .sectionDePied .colonneDePied {
+    padding: 2rem 0;
+  }
+  footer .sectionDePied .colonneDePied:nth-of-type(1)::before {
+    display: none;
+  }
+  footer .sectionDePied .colonneDePied:nth-of-type(3)::before {
+    display: none;
+  }
+}
+@media screen and (max-width: 585px) {
+  main article {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    margin-top: 61px;
+  }
+  main article img {
+    margin-top: 3rem;
+    width: 100px;
+    object-fit: cover;
+  }
+  main article:nth-of-type(2n) img {
+    object-position: left top;
+    margin-right: 0;
+  }
+  main article:nth-of-type(2n+1) img {
+    object-position: right top;
+    margin-left: 0;
+  }
+  main article .section h2 {
+    text-align: center;
+  }
+  main article .section .composition {
+    justify-content: center;
+  }
+  main .ceinture {
+    display: none;
+  }
+}
+@media screen and (max-width: 355px) {
+  main article img {
+    width: 75px;
+  }
+  main article:nth-of-type(2n) {
+    flex-direction: row-reverse;
+  }
+  main article:nth-of-type(2n) .section {
+    margin-right: 1rem;
+  }
+  main article:nth-of-type(2n+1) {
+    flex-direction: row;
+  }
+  main article:nth-of-type(2n+1) .section {
+    margin-left: 1rem;
+  }
+  main article .section .composition p.genre {
+    margin-right: 1rem;
+  }
+}
+@keyframes etoile {
+  0% {
+    text-shadow: 0 0 2px #ffffff, 0 0 30px #ffffff, 0px 0px 5px #ffffff, 0 0 150px #ffffff;
+    color: #ffffff;
+  }
+  20% {
+    text-shadow: 0 0 2px #969632, 0 0 30px #969632, 0px 0px 5px #969632, 0 0 150px #969632;
+    color: #969632;
+  }
+  40% {
+    text-shadow: 0 0 2px #FFD100, 0 0 30px #FFD100, 0px 0px 5px #FFD100, 0 0 150px #FFD100;
+    color: #FFD100;
+  }
+  60% {
+    text-shadow: 0 0 2px #FFD100, 0 0 30px #FFD100, 0px 0px 5px #FFD100, 0 0 150px #FFD100;
+    color: #FFD100;
+  }
+  80% {
+    text-shadow: 0 0 2px #969632, 0 0 30px #969632, 0px 0px 5px #969632, 0 0 150px #969632;
+    color: #969632;
+  }
+  100% {
+    text-shadow: 0 0 2px #ffffff, 0 0 30px #ffffff, 0px 0px 5px #ffffff, 0 0 150px #ffffff;
+    color: #ffffff;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
